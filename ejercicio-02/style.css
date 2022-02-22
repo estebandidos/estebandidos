@@ -1,3 +1,8 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 /* Reset */
 *,
 *::before,
@@ -50,21 +55,23 @@ picture {
 
 /* Variables */
 :root {
-  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-  /* --size-outline: 3px; // Esto es para cambiar el outline del helper */
+  font-family: 'Inter var', sans-serif;
 }
 
 /* Base */
-body {
-  font-family: var(--font-sans);
-}
+
 /* Layout */
 .contenedor-banner {
-  background-color: brown;*/
+outline: 2px solid black;
+
+  background-color: #ff94ed;
+
 }
 .contenedor-banner h2 {
   font-size: 30px;
   text-align: center;
+  /*padding-left: 40px;*/
+  
 }
 .contenedor-banner p {
   text-align: center;
@@ -78,13 +85,19 @@ body {
  /* margin-bottom: auto;*/
     margin-left: auto;
 }
-.contenedor {
+ .contenedor-main {
+background-color: #f6fd8f;
+} 
 
+.hf {
+height: 200px;
+background-color: ;
 }
 .contenedor-fila{
   display: flex;
-  margin: 40px auto;
-  width: 80%
+  margin: 0 auto;
+  padding-block: 40px;
+  width: 80%;
 
 }
 .contenedor-fila img{
@@ -93,7 +106,9 @@ body {
   height: auto;
 
 }
+.class{
 
+}
 /* Componentes */
 
 /* Utilidades */
