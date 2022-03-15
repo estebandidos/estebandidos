@@ -1,16 +1,10 @@
-/* Imports & supports */
-/* @import url("https://rsms.me/inter/inter.css");
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
-} */
-/* Reset & Base */
+/* Reset */
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
+
 body,
 h1,
 h2,
@@ -20,28 +14,29 @@ h5,
 p,
 figure,
 picture {
-  margin: 0
+  margin: 0;
 }
+
 body {
   line-height: 1.5;
   min-height: 100vh;
-  background-color: azure;
 }
+
 ul {
   margin: 0;
-  padding-inline: 0
+  padding-inline: 0;
 }
+
 li {
-  list-style: none
+  list-style: none;
 }
-a {
-  text-decoration: none
-}
+
 img,
 picture {
   max-width: 100%;
-  display: block
+  display: block;
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -49,90 +44,87 @@ picture {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important
+    scroll-behaviour: auto !important;
   }
 }
+
 /* Variables */
 :root {
-  /* colores */
-  /*   --clr-dark: 230 35% 7%;
-  --clr-light: 231 77% 90%;
-  --clr-white: 0 0% 100%; */
-/* tipografia */
-  --f-family: 'Brygada 1918';
-  --f-family2: "Raleway", sans-serif;
-  --f-size: 150px;
-  --f-weight: 400;
-}
-/* Aplica estas variables a todos los elementos */
-* {
-  font-family: var(--f-family);
-
-  font-size: var(--f-size);
-  font-weight: var(--f-weight)
+  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 
-h1 {
-   text-transform: uppercase;
-   color: azure;
-   text-align: center;
-
-
+/* Base */
+body {
+  font-family: var(--font-sans);
 }
-header{
-background-color: black;
-height: 170px;
-}
-
-nav {
-  font-size: 20px;
-text-align: center;
-margin-bottom: 20px;;
+/* Layout */
+.menu {
+  height: 10vh;
+  background: rgb(71, 24, 158);
+  width: 100%;
 }
 
-.manifesto {
-  font-family: var(--f-family2);
-  font-size: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-   text-transform: uppercase;
-}
-.manifesto span {
-  font-family: var(--f-family2);
-  font-size: 100px;
-  line-height: 1;
-   text-transform: uppercase;
-}
-
-.manifesto span:nth-child(2),
-.manifesto span:nth-child(4)  {
-  justify-self: end;
-}
-figure {
-  margin-top: 3vw;
-  width: 25vw;
-  border: 3px solid black;
-  border-radius: .5rem;
-  overflow: hidden;
-}
-.img {
-  width: 110%;
-  height: 100%;
-  object-fit: cover;
-
-/* Componentes */
-/* Utilidades */
-.flex {
-  display: 
-}
 .grid {
-  display: grid
+ height: 90vh;
+ gap:10px;
+ margin: 15px;
+  display: grid;
+  /* Aquí inicio 👇🏼 */
+ grid-template: repeat(5, 1fr) / repeat(4,1fr);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }
 
-.contenedor {
-  width: 90vw;
-  margin-inline: auto; 
-  flex-direction: row-reverse;
-  
+.grid div {
+ background: rgb(153, 151, 151);
+ border: 1px solid black;
 }
 
+.grid div:nth-child(1) {
+  grid-area: 1/1/3/2;
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/01_jte7dv.jpg");
+}
+.grid div:nth-child(2) {
+grid-area: 1/2/2/3;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/02_oqswh1.jpg");
+
+}
+.grid div:nth-child(3) {
+grid-area: 1/3/2/3;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/04_mryv5s.jpg");
+}
+.grid div:nth-child(4) {
+  grid-area: 1/4/2/5;
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/08_wro2oj.jpg");
+
+}
+.grid div:nth-child(5) {
+grid-area: 2/2/3/4;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/07_e2mosf.jpg");
+}
+.grid div:nth-child(6) {
+grid-area: 2/4/3/5;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/06_o6l71o.jpg");
+}
+.grid div:nth-child(7) {
+grid-area: 3/1/5/3;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/05_bbvzw9.jpg");
+}
+.grid div:nth-child(8) {
+grid-area: 3/3/5/5;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/09_qsmzr6.jpg");
+}
+.grid div:nth-child(9) {
+grid-area: 5/1/6/2;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/10_mzggpy.jpg");
+}
+.grid div:nth-child(10) {
+grid-area: 5/2/6/3;
+background-image: url(https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/11_v5pwkc.jpg);
+}
+.grid div:nth-child(11) {
+grid-area: 5/3/6/5;
+background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/12_kwfnof.jpg");
+}
